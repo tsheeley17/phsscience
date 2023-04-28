@@ -245,3 +245,194 @@ function energy() {
     document.getElementById("result16").innerHTML = "The answer is " + answer.toFixed(2);
 }
 
+function heat() {
+    var m = parseFloat(prompt("What is the mass of the object? "));
+    var c = parseFloat(prompt("What is the specific heat of the object? "));
+    var t = parseFloat(prompt("How much did the object's temperature change? "));
+    var answer = m * c * t;
+    document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+}
+
+function momentum() {
+    var m = parseFloat(prompt("What is the mass of the object? "));
+    var v = parseFloat(prompt("What is the velocity of the object? "));
+    var answer = m * v;
+    document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+}
+
+function friction() {
+    var fc = parseFloat(prompt("What is the friction coefficient? "));
+    var nf = parseFloat(prompt("How much force is being exerted on the object from the sloped surface? "));
+    var answer = fc * nf;
+    document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+}
+
+function spring() {
+    var solve = prompt("Would you like to solve for the spring force (1) or the spring constant (2)? ");
+    if (solve !== "1" && solve !== "2" && solve !== "3") {
+        while (solve !== "1" && solve !== "2" && solve !== "3") {
+            solve = prompt("Please enter the number of the option you'd like to pick. ");
+        }
+    }
+
+    if (solve === "1") {
+        var k = parseFloat(prompt("What is the spring constant? "));
+        var x = parseFloat(prompt("What is the displacement by the spring? "));
+        var answer = -k * x;
+    } else if (solve === "2") {
+        var f = parseFloat(prompt("What is the spring force? "));
+        var x = parseFloat(prompt("What is the displacement by the spring?"));
+        var answer = -f * x;
+    }
+
+    document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+}
+
+function power() {
+    var w = parseFloat(prompt("How much work was done? "));
+    var t = parseFloat(prompt("How much time has passed? "));
+    var answer = w * t;
+
+    document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+}
+
+function tension() {
+    var mg = parseFloat(prompt("What is the weight of the object? "));
+    var ma = parseFloat(prompt("What is the acceleration of the object? "));
+    var direction = prompt("Is the object moving up (1) or down (2)? ");
+    if (direction !== "1" && direction !== "2") {
+        while (direction !== "1" && direction !== "2") {
+            direction = prompt("Enter one of the options. ");
+        }
+    }
+    if (direction === "1") {
+        var answer = mg + ma;
+    } else if (direction === "2") {
+        var answer = mg - ma;
+    }
+
+    document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+}
+
+function surface_tension() {
+    var f = parseFloat(prompt("What is the force? "));
+    var l = parseFloat(prompt("What is the length of the object creating the force? "));
+    var answer = f / l;
+
+    document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+}
+
+function electrical_constant() {
+    const k = parseFloat(prompt("What is the Coulomb constant? "));
+    const q = parseFloat(prompt("What is the charge? "));
+    const r = parseFloat(prompt("What is the distance of separation? "));
+    const answer = k * (q / r);
+    document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+}
+
+function charles_law() {
+    let solve1 = prompt("Would you like to solve for volume (1) or temperature (2)? ");
+    while (solve1 !== "1" && solve1 !== "2") {
+        solve1 = prompt("Enter the number of the option you'd like to use. ");
+    }
+
+    if (solve1 === "1") {
+        const v1 = parseFloat(prompt("What is the initial volume? "));
+        const t1 = parseFloat(prompt("What is the initial temperature in Kelvin? "));
+        const t2 = parseFloat(prompt("What is the second temperature in Kelvin? "));
+        const answer = v1 / t1 * t2;
+        alert("Your answer is: " + answer);
+    } else if (solve1 === "2") {
+        const v1 = parseFloat(prompt("What is the initial volume? "));
+        const t1 = parseFloat(prompt("What is the initial temperature in Kelvin? "));
+        const v2 = parseFloat(prompt("What is the second volume? "));
+        const answer = t1 / v1 * v2;
+        document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+    }
+}
+
+function boyles_law() {
+    let solve2 = prompt("Would you like to solve for volume (1) or pressure (2)? ");
+    while (solve2 !== "1" && solve2 !== "2") {
+        solve2 = prompt("Enter the number of the option you'd like to use. ");
+    }
+
+    if (solve2 === "1") {
+        const v1 = parseFloat(prompt("What is the initial volume? "));
+        const p1 = parseFloat(prompt("What is the intial pressure? "));
+        const p2 = parseFloat(prompt("What is the final volume? "));
+        const answer = p1 * v1 / p2;
+        document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+    } else if (solve2 === "2") {
+        const v1 = parseFloat(prompt("What is the initial volume? "));
+        const v2 = parseFloat(prompt("What is the final volume? "));
+        const p1 = parseFloat(prompt("What is the initial pressure? "));
+        const answer = p1 * v1 / v2;
+        document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+    }
+}
+
+function avagadrosLaw() {
+    let solve = prompt("Would you like to solve for volume (1) or the number of moles (2)?");
+    while (solve != "1" && solve != "2") {
+        solve = prompt("Please enter 1 to solve for volume or 2 to solve for the number of moles.");
+    }
+
+    if (solve == "1") {
+        let v1 = parseFloat(prompt("What is the initial volume?"));
+        let n1 = parseFloat(prompt("What is the initial amount of gas in moles?"));
+        let n2 = parseFloat(prompt("What is the final amount of gas in moles?"));
+        let answer = (n2 / n1) * v1;
+        document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+    } else {
+        let v1 = parseFloat(prompt("What is the initial volume?"));
+        let v2 = parseFloat(prompt("What is the final volume?"));
+        let n1 = parseFloat(prompt("What is the initial amount of gas in moles?"));
+        let answer = (n1 / v1) * v2;
+        document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+    }
+}
+
+function ideal_gas() {
+    let solve4 = prompt("Would you like to solve for pressure (1), volume (2), amount of the substance (3), ideal gas constant (4), or temperature (5)? ");
+    while (solve4 != "1" && solve4 != "2" && solve4 != "3" && solve4 != "4" && solve4 != "5") {
+        solve4 = prompt("Enter the number of the option you'd like to use. ");
+    }
+    let answer;
+
+    if (solve4 == "1") {
+        let v = parseFloat(prompt("What is the volume? "));
+        let n = parseFloat(prompt("How much gas is there in moles? "));
+        let r = parseFloat(prompt("What is the ideal gas constant? "));
+        let t = parseFloat(prompt("What is the temperature? "));
+        answer = n * r * t * v;
+    } else if (solve4 == "2") {
+        let p = parseFloat(prompt("What is the pressure? "));
+        let n = parseFloat(prompt("How much gas is there in moles? "));
+        let r = parseFloat(prompt("What is the ideal gas constant? "));
+        let t = parseFloat(prompt("What is the temperature? "));
+        answer = (n * r * t) / p;
+    } else if (solve4 == "3") {
+        let p = parseFloat(prompt("What is the pressure? "));
+        let v = parseFloat(prompt("What is the volume? "));
+        let r = parseFloat(prompt("What is the ideal gas constant? "));
+        let t = parseFloat(prompt("What is the temperature? "));
+        answer = (p * v) / (r * t);
+    } else if (solve4 == "4") {
+        let p = parseFloat(prompt("What is the pressure? "));
+        let v = parseFloat(prompt("What is the volume? "));
+        let n = parseFloat(prompt("How much gas is there in moles? "));
+        let t = parseFloat(prompt("What is the temperature? "));
+        answer = (p * v) / (n * t);
+    } else if (solve4 == "5") {
+        let p = parseFloat(prompt("What is the pressure? "));
+        let v = parseFloat(prompt("What is the volume? "));
+        let n = parseFloat(prompt("How much gas is there in moles? "));
+        let r = parseFloat(prompt("What is the ideal gas constant? "));
+        answer = (p * v) / (n * r);
+    }
+
+    document.getElementById("result").innerHTML = "Your answer is: " + answer.toFixed(2);
+}
+
+
