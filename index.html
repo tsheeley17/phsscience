@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Physics Calculator - Speed</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="art">
+        <p><pre>
+             _______                    _______ _________  _______     _______
+            |       \  |     | \     / /            |     /       \   /
+            |        | |     |  \   / |             |    |           |
+            |_______/  |_____|   \ /   \______      |    |            \_______
+            |          |     |    |           \     |    |                    \
+            |          |     |    |            |    |    |                     |
+            |          |     |    |    _______/ ____|____ \_______/    _______/
+                        _______                           _______
+                       /       \      /\      |          /       \
+                      |              /  \     |         |
+                      |             /____\    |         |
+                      |            /      \   |         |
+                      |           /        \  |         |
+                       \_______/ /          \ |________  \_______/
+         </pre>
+        </p>
+    </div>
+    <div class="title">
+        <h2>Peebles High School Physics Calculator</h2>
+    </div>
+    <div class="formulaContainer">
+    <div class="speed formula">
+        <h1>Speed Calculator</h1>
+        <label for="d">Distance Traveled (meters):</label>
+        <input type="number" step="any" id="d" name="d" required>
+        <br>
+        <label for="t">Time (seconds):</label>
+        <input type="number" step="any" id="t" name="t" required>
+        <br>
+        <button type="button" onclick="speed()">Calculate</button>
+        <p id="result"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
+    </div>
+    
+    <div class="acceleration formula">
+        <h1>Acceleration Calculator</h1>
+        <label for="sv">Starting Velocity (m/s):</label>
+        <input type="number" step="any" id="sv" name="sv" required>
+        <br>
+        <label for="ev">Ending Velocity (m/s):</label>
+        <input type="number" step="any" id="ev" name="ev" required>
+        <br>
+        <label for="ft">Time to First Point (seconds):</label>
+        <input type="number" step="any" id="ft" name="ft" required>
+        <br>
+        <label for="et">Time to Second Point (seconds):</label>
+        <input type="number" step="any" id="et" name="et" required>
+        <br>
+        <button type="button" onclick="calculateAcceleration()">Calculate</button>
+        <p id="result1"></p>
+      </div>
+
+      <div class="gravity formula">
+        <h1>Force of Gravity Calculator</h1>
+        <label for="m1">Mass of First Object (kg):</label>
+        <input type="number" step="any" id="m1" name="m1" required>
+        <br>
+        <label for="m2">Mass of Second Object (kg):</label>
+        <input type="number" step="any" id="m2" name="m2" required>
+        <br>
+        <label for="d">Distance Between Objects (m):</label>
+        <input type="number" step="any" id="d" name="d" required>
+        <br>
+        <button type="button" onclick="calculateGravity()">Calculate</button>
+        <p id="result2"></p>
+      </div>
+
+      <div class="velocity">
+        <h1>Velocity Calculator</h1>
+        <label for="d">Distance Traveled (meters):</label>
+        <input type="number" step="any" id="d" name="d" required>
+        <br>
+        <label for="t">Time (seconds):</label>
+        <input type="number" step="any" id="t" name="t" required>
+        <br>
+        <button type="button" onclick="calculateVelocity()">Calculate</button>
+        <p id="result3"></p>
+      </div>
+      
+      <div class="force">
+        <h1>Force Calculator</h1>
+        <label for="m">Mass (kg):</label>
+        <input type="number" step="any" id="m" name="m" required>
+        <br>
+        <label for="a">Acceleration (m/s^2):</label>
+        <input type="number" step="any" id="a" name="a" required>
+        <br>
+        <button type="button" onclick="calculateForce()">Calculate</button>
+        <p id="result4"></p>
+      </div>
+      
+      <div class="weight">
+        <h1>Weight Calculator</h1>
+        <label for="m">Mass (kg):</label>
+        <input type="number" step="any" id="m" name="m" required>
+        <br>
+        <button type="button" onclick="calculateWeight()">Calculate</button>
+        <p id="result5"></p>
+      </div>
+      
+      <div class="potential">
+        <h1>Potential Energy Calculator</h1>
+        <label for="m">Mass (kg):</label>
+        <input type="number" step="any" id="m" name="m" required>
+        <br>
+        <label for="h">Height (m):</label>
+        <input type="number" step="any" id="h" name="h" required>
+        <br>
+        <button type="button" onclick="calculatePotential()">Calculate</button>
+        <p id="result6"></p>
+      </div>
+      
+      <div class="kinetic">
+        <h1>Kinetic Energy Calculator</h1>
+        <label for="m">Mass (kg):</label>
+        <input type="number" step="any" id="m" name="m" required>
+        <br>
+        <label for="v">Velocity (m/s):</label>
+        <input type="number" step="any" id="v" name="v" required>
+        <br>
+        <button type="button" onclick="calculateKinetic()">Calculate</button>
+        <p id="result7"></p>
+      </div>
+      
+      <div class="electricity">
+        <h1>Electricity Calculator</h1>
+        <button type="button" onclick="calculateElectricity()">Calculate</button>
+        <p id="result8"></p>
+      </div>
+      
+      <div class="density">
+        <h1>Density Calculator</h1>
+        <label for="m">Mass (kg):</label>
+        <input type="number" step="any" id="m" name="m" required>
+        <br>
+        <label for="v">Volume (m^3):</label>
+        <input type="number" step="any" id="v" name="v" required>
+        <br>
+        <button type="button" onclick="calculateDensity()">Calculate</button>
+        <p id="result9"></p>
+      </div>
+      
+      <div class="buoyancy">
+        <h1>Buoyancy Calculator</h1>
+        <label for="d">Fluid Density (kg/m^3):</label>
+        <input type="number" step="any" id="d" name="d" required>
+        <br>
+        <label for="g">Acceleration Due to Gravity (m/s^2):</label>
+        <input type="number" step="any" id="g" name="g" required>
+        <br>
+        <label for="v">Fluid Volume (m^3):</label>
+        <input type="number" step="any" id="v" name="v" required>
+        <br>
+        <button type="button" onclick="calculateBuoyancy()">Calculate</button>
+        <p id="result10"></p>
+      </div>
+
+      <div class="temp-conversion">
+        <h1>Temperature Conversion</h1>
+        <label for="temp">Find temperature in:</label>
+        <select id="temp" name="temp">
+          <option value="c">Celsius</option>
+          <option value="f">Fahrenheit</option>
+          <option value="k">Kelvin</option>
+        </select>
+        <br>
+        <label for="start">Starting unit:</label>
+        <select id="start" name="start">
+          <option value="c">Celsius</option>
+          <option value="f">Fahrenheit</option>
+          <option value="k">Kelvin</option>
+        </select>
+        <br>
+        <label for="temp-value">Temperature:</label>
+        <input type="number" step="any" id="temp-value" name="temp-value" required>
+        <br>
+        <button type="button" onclick="temp_conversion()">Calculate</button>
+        <p id="result11"></p>
+      </div>
+      
+      <div class="distance">
+        <h1>Distance Calculator</h1>
+        <label for="speed">Speed (m/s):</label>
+        <input type="number" step="any" id="speed" name="speed" required>
+        <br>
+        <label for="time">Time (s):</label>
+        <input type="number" step="any" id="time" name="time" required>
+        <br>
+        <button type="button" onclick="distance()">Calculate</button>
+        <p id="result12"></p>
+      </div>
+      
+      <div class="work">
+        <h1>Work Calculator</h1>
+        <label for="force">Force (N):</label>
+        <input type="number" step="any" id="force" name="force" required>
+        <br>
+        <label for="displacement">Displacement (m):</label>
+        <input type="number" step="any" id="displacement" name="displacement" required>
+        <br>
+        <button type="button" onclick="work()">Calculate</button>
+        <p id="result13"></p>
+      </div>
+
+      <div class="drag">
+        <h1>Drag Calculator</h1>
+        <label for="density">Fluid Density (kg/m^3):</label>
+        <input type="number" step="any" id="density" name="density" required>
+        <br>
+        <label for="speed">Object Speed (m/s):</label>
+        <input type="number" step="any" id="speed" name="speed" required>
+        <br>
+        <label for="drag-coeff">Drag Coefficient:</label>
+        <input type="number" step="any" id="drag-coeff" name="drag-coeff" required>
+        <br>
+        <label for="area">Cross-Sectional Area (m^2):</label>
+        <input type="number" step="any" id="area" name="area" required>
+        <br>
+        <button type="button" onclick="drag()">Calculate</button>
+        <p id="result14"></p>
+      </div>
+
+      <div class="mach">
+        <h1>Mach Number Calculator</h1>
+        <label for="ov">Object Velocity:</label>
+        <input type="number" step="any" id="ov" name="ov" required>
+        <br>
+        <label for="sv">Speed of Sound:</label>
+        <input type="number" step="any" id="sv" name="sv" required>
+        <br>
+        <button type="button" onclick="mach()">Calculate</button>
+        <p id="result15"></p>
+      </div>
+      
+      <div class="energy">
+        <h1>Energy Calculator</h1>
+        <label for="m">Mass (kg):</label>
+        <input type="number" step="any" id="m" name="m" required>
+        <br>
+        <label for="c">Speed of Light (m/s):</label>
+        <input type="text" id="c" name="c" placeholder="Default = 299,792,458" >
+        <br>
+        <button type="button" onclick="energy()">Calculate</button>
+        <p id="result16"></p>
+      </div>
+      
+      
+      
+      
+      
+      <div class="reset-button">
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
