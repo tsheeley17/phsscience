@@ -57,6 +57,7 @@
         <br>
         <button type="button" onclick="calculateAcceleration()">Calculate</button>
         <p id="result1"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
 
       <div class="gravity formula">
@@ -72,9 +73,10 @@
         <br>
         <button type="button" onclick="calculateGravity()">Calculate</button>
         <p id="result2"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
 
-      <div class="velocity">
+      <div class="velocity formula">
         <h1>Velocity Calculator</h1>
         <label for="d">Distance Traveled (meters):</label>
         <input type="number" step="any" id="d" name="d" required>
@@ -84,9 +86,10 @@
         <br>
         <button type="button" onclick="calculateVelocity()">Calculate</button>
         <p id="result3"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="force">
+      <div class="force formula">
         <h1>Force Calculator</h1>
         <label for="m">Mass (kg):</label>
         <input type="number" step="any" id="m" name="m" required>
@@ -96,18 +99,20 @@
         <br>
         <button type="button" onclick="calculateForce()">Calculate</button>
         <p id="result4"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="weight">
+      <div class="weight formula">
         <h1>Weight Calculator</h1>
         <label for="m">Mass (kg):</label>
         <input type="number" step="any" id="m" name="m" required>
         <br>
         <button type="button" onclick="calculateWeight()">Calculate</button>
         <p id="result5"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="potential">
+      <div class="potential formula">
         <h1>Potential Energy Calculator</h1>
         <label for="m">Mass (kg):</label>
         <input type="number" step="any" id="m" name="m" required>
@@ -117,9 +122,10 @@
         <br>
         <button type="button" onclick="calculatePotential()">Calculate</button>
         <p id="result6"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="kinetic">
+      <div class="kinetic formula">
         <h1>Kinetic Energy Calculator</h1>
         <label for="m">Mass (kg):</label>
         <input type="number" step="any" id="m" name="m" required>
@@ -129,15 +135,17 @@
         <br>
         <button type="button" onclick="calculateKinetic()">Calculate</button>
         <p id="result7"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="electricity">
+      <div class="electricity formula">
         <h1>Electricity Calculator</h1>
         <button type="button" onclick="calculateElectricity()">Calculate</button>
         <p id="result8"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="density">
+      <div class="density formula">
         <h1>Density Calculator</h1>
         <label for="m">Mass (kg):</label>
         <input type="number" step="any" id="m" name="m" required>
@@ -147,9 +155,10 @@
         <br>
         <button type="button" onclick="calculateDensity()">Calculate</button>
         <p id="result9"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="buoyancy">
+      <div class="buoyancy formula">
         <h1>Buoyancy Calculator</h1>
         <label for="d">Fluid Density (kg/m^3):</label>
         <input type="number" step="any" id="d" name="d" required>
@@ -162,9 +171,10 @@
         <br>
         <button type="button" onclick="calculateBuoyancy()">Calculate</button>
         <p id="result10"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
 
-      <div class="temp-conversion">
+      <div class="temp-conversion formula">
         <h1>Temperature Conversion</h1>
         <label for="temp">Find temperature in:</label>
         <select id="temp" name="temp">
@@ -185,9 +195,10 @@
         <br>
         <button type="button" onclick="temp_conversion()">Calculate</button>
         <p id="result11"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="distance">
+      <div class="distance formula">
         <h1>Distance Calculator</h1>
         <label for="speed">Speed (m/s):</label>
         <input type="number" step="any" id="speed" name="speed" required>
@@ -197,9 +208,10 @@
         <br>
         <button type="button" onclick="distance()">Calculate</button>
         <p id="result12"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="work">
+      <div class="work formula">
         <h1>Work Calculator</h1>
         <label for="force">Force (N):</label>
         <input type="number" step="any" id="force" name="force" required>
@@ -209,9 +221,10 @@
         <br>
         <button type="button" onclick="work()">Calculate</button>
         <p id="result13"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
 
-      <div class="drag">
+      <div class="drag formula">
         <h1>Drag Calculator</h1>
         <label for="density">Fluid Density (kg/m^3):</label>
         <input type="number" step="any" id="density" name="density" required>
@@ -227,9 +240,10 @@
         <br>
         <button type="button" onclick="drag()">Calculate</button>
         <p id="result14"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
 
-      <div class="mach">
+      <div class="mach formula">
         <h1>Mach Number Calculator</h1>
         <label for="ov">Object Velocity:</label>
         <input type="number" step="any" id="ov" name="ov" required>
@@ -239,9 +253,10 @@
         <br>
         <button type="button" onclick="mach()">Calculate</button>
         <p id="result15"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="energy">
+      <div class="energy formula">
         <h1>Energy Calculator</h1>
         <label for="m">Mass (kg):</label>
         <input type="number" step="any" id="m" name="m" required>
@@ -251,9 +266,10 @@
         <br>
         <button type="button" onclick="energy()">Calculate</button>
         <p id="result16"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="heat">
+      <div class="heat formula">
         <h1>Heat Calculator</h1>
         <label for="mass">Mass:</label>
         <input type="number" step="any" id="mass" name="mass" required>
@@ -265,10 +281,11 @@
         <input type="number" step="any" id="temp-change" name="temp-change" required>
         <br>
         <button type="button" onclick="heat()">Calculate</button>
-        <p id="result"></p>
+        <p id="result17"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="momentum">
+      <div class="momentum formula">
         <h1>Momentum Calculator</h1>
         <label for="mass">Mass:</label>
         <input type="number" step="any" id="mass" name="mass" required>
@@ -277,10 +294,11 @@
         <input type="number" step="any" id="velocity" name="velocity" required>
         <br>
         <button type="button" onclick="momentum()">Calculate</button>
-        <p id="result"></p>
+        <p id="result18"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="friction">
+      <div class="friction formula">
         <h1>Friction Calculator</h1>
         <label for="friction-coeff">Friction Coefficient:</label>
         <input type="number" step="any" id="friction-coeff" name="friction-coeff" required>
@@ -289,10 +307,11 @@
         <input type="number" step="any" id="normal-force" name="normal-force" required>
         <br>
         <button type="button" onclick="friction()">Calculate</button>
-        <p id="result"></p>
+        <p id="result19"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="spring">
+      <div class="spring formula">
         <h1>Spring Force/Constant Calculator</h1>
         <label for="solve">Solve for:</label>
         <select id="solve" name="solve">
@@ -310,10 +329,11 @@
         <input type="number" step="any" id="x" name="x">
         <br>
         <button type="button" onclick="spring()">Calculate</button>
-        <p id="result"></p>
+        <p id="result20"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
 
-      <div class="power">
+      <div class="power formula">
         <h1>Power Calculator</h1>
         <label for="w">Work Done:</label>
         <input type="number" step="any" id="w" name="w">
@@ -322,10 +342,11 @@
         <input type="number" step="any" id="t" name="t">
         <br>
         <button type="button" onclick="power()">Calculate</button>
-        <p id="result"></p>
+        <p id="result21"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
 
-      <div class="tension">
+      <div class="tension formula">
         <h1>Tension Calculator</h1>
         <label for="mg">Weight of the Object:</label>
         <input type="number" step="any" id="mg" name="mg">
@@ -340,10 +361,11 @@
         </select>
         <br>
         <button type="button" onclick="tension()">Calculate</button>
-        <p id="result"></p>
+        <p id="result22"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
 
-      <div class="surface-tension">
+      <div class="surface-tension formula">
         <h1>Surface Tension Calculator</h1>
         <label for="f">Force:</label>
         <input type="number" step="any" id="f" name="f">
@@ -352,10 +374,11 @@
         <input type="number" step="any" id="l" name="l">
         <br>
         <button type="button" onclick="surface_tension()">Calculate</button>
-        <p id="result"></p>
+        <p id="result23"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="electric">
+      <div class="electric formula">
         <h1>Electric Constant Calculator</h1>
         <label for="k">Coulomb Constant:</label>
         <input type="number" step="any" id="k" name="k" required>
@@ -367,9 +390,11 @@
         <input type="number" step="any" id="r" name="r" required>
         <br>
         <button type="button" onclick="electrical_constant()">Calculate</button>
+        <p id="result24"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="charles">
+      <div class="charles formula">
         <h1>Charles' Law Calculator</h1>
         <label for="solve1">Solve for Volume (1) or Temperature (2):</label>
         <input type="number" id="solve1" name="solve1" min="1" max="2" required>
@@ -387,9 +412,11 @@
         <input type="number" step="any" id="v2" name="v2" required>
         <br>
         <button type="button" onclick="charles_law()">Calculate</button>
+        <p id="result25"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="boyles">
+      <div class="boyles formula">
         <h1>Boyle's Law Calculator</h1>
         <label for="solve2">Solve for Volume (1) or Pressure (2):</label>
         <input type="number" id="solve2" name="solve2" min="1" max="2" required>
@@ -407,9 +434,11 @@
         <input type="number" step="any" id="v2" name="v2" required>
         <br>
         <button type="button" onclick="boyles_law()">Calculate</button>
+        <p id="result26"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div class="avagadros-law">
+      <div class="avagadros-law formula">
         <h1>Avogadro's Law Calculator</h1>
         <label for="solve">Solve for:</label>
         <select id="solve">
@@ -430,10 +459,11 @@
         <input type="number" step="any" id="v2" name="v2">
         <br>
         <button type="button" onclick="avagadrosLaw()">Calculate</button>
-        <p id="result"></p>
+        <p id="result27"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
       
-      <div>
+      <div class="ideal-gas formula">
         <h2>Ideal Gas Law Calculator</h2>
         <p>Select an option:</p>
         <select id="option">
@@ -452,9 +482,10 @@
         </div>
         <br>
         <button onclick="ideal_gas()">Calculate</button>
-        <p id="result"></p>
+        <p id="result28"></p>
+        <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
       </div>
-      
+      <!-- add torque and pressure -->
       
       <div class="reset-button">
         <button class="reset-button" type="reset" onclick="resetPage()">Reset</button>
