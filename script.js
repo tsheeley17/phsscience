@@ -202,11 +202,11 @@ function temp_conversion() {
 }
 
 function distance() {
-    var s = parseFloat(prompt("What is the speed of the object?"));
-    var t = parseFloat(prompt("How long was it moving?"));
+    var s = parseFloat(document.getElementById("speed").value);
+    var t = parseFloat(document.getElementById("time").value);
     var answer = s * t;
 
-    document.getElementById("result12").innerHTML = "Your answer is: " + answer.toFixed(2);
+    document.getElementById("result12").innerHTML = "Your answer is: " + answer.toFixed(2) + " meters.";
 }
 
 function work() {
