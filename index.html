@@ -25,7 +25,7 @@
         </p>
     </div>
     <div class="title">
-        <h2>Peebles High School Physics Calculator</h2>
+        <h2>Peebles High School Physics Calculator Working</h2>
     </div>
     <div class="formulaContainer">
     <div class="speed formula">
@@ -253,8 +253,207 @@
         <p id="result16"></p>
       </div>
       
+      <div class="heat">
+        <h1>Heat Calculator</h1>
+        <label for="mass">Mass:</label>
+        <input type="number" step="any" id="mass" name="mass" required>
+        <br>
+        <label for="specific-heat">Specific Heat:</label>
+        <input type="number" step="any" id="specific-heat" name="specific-heat" required>
+        <br>
+        <label for="temp-change">Temperature Change:</label>
+        <input type="number" step="any" id="temp-change" name="temp-change" required>
+        <br>
+        <button type="button" onclick="heat()">Calculate</button>
+        <p id="result"></p>
+      </div>
       
+      <div class="momentum">
+        <h1>Momentum Calculator</h1>
+        <label for="mass">Mass:</label>
+        <input type="number" step="any" id="mass" name="mass" required>
+        <br>
+        <label for="velocity">Velocity:</label>
+        <input type="number" step="any" id="velocity" name="velocity" required>
+        <br>
+        <button type="button" onclick="momentum()">Calculate</button>
+        <p id="result"></p>
+      </div>
       
+      <div class="friction">
+        <h1>Friction Calculator</h1>
+        <label for="friction-coeff">Friction Coefficient:</label>
+        <input type="number" step="any" id="friction-coeff" name="friction-coeff" required>
+        <br>
+        <label for="normal-force">Normal Force:</label>
+        <input type="number" step="any" id="normal-force" name="normal-force" required>
+        <br>
+        <button type="button" onclick="friction()">Calculate</button>
+        <p id="result"></p>
+      </div>
+      
+      <div class="spring">
+        <h1>Spring Force/Constant Calculator</h1>
+        <label for="solve">Solve for:</label>
+        <select id="solve" name="solve">
+          <option value="1">Spring Force</option>
+          <option value="2">Spring Constant</option>
+        </select>
+        <br>
+        <label for="k">Spring Constant:</label>
+        <input type="number" step="any" id="k" name="k">
+        <br>
+        <label for="f">Spring Force:</label>
+        <input type="number" step="any" id="f" name="f">
+        <br>
+        <label for="x">Displacement by the Spring:</label>
+        <input type="number" step="any" id="x" name="x">
+        <br>
+        <button type="button" onclick="spring()">Calculate</button>
+        <p id="result"></p>
+      </div>
+
+      <div class="power">
+        <h1>Power Calculator</h1>
+        <label for="w">Work Done:</label>
+        <input type="number" step="any" id="w" name="w">
+        <br>
+        <label for="t">Time Passed:</label>
+        <input type="number" step="any" id="t" name="t">
+        <br>
+        <button type="button" onclick="power()">Calculate</button>
+        <p id="result"></p>
+      </div>
+
+      <div class="tension">
+        <h1>Tension Calculator</h1>
+        <label for="mg">Weight of the Object:</label>
+        <input type="number" step="any" id="mg" name="mg">
+        <br>
+        <label for="ma">Acceleration of the Object:</label>
+        <input type="number" step="any" id="ma" name="ma">
+        <br>
+        <label for="direction">Direction:</label>
+        <select id="direction" name="direction">
+          <option value="1">Up</option>
+          <option value="2">Down</option>
+        </select>
+        <br>
+        <button type="button" onclick="tension()">Calculate</button>
+        <p id="result"></p>
+      </div>
+
+      <div class="surface-tension">
+        <h1>Surface Tension Calculator</h1>
+        <label for="f">Force:</label>
+        <input type="number" step="any" id="f" name="f">
+        <br>
+        <label for="l">Length of Object:</label>
+        <input type="number" step="any" id="l" name="l">
+        <br>
+        <button type="button" onclick="surface_tension()">Calculate</button>
+        <p id="result"></p>
+      </div>
+      
+      <div class="electric">
+        <h1>Electric Constant Calculator</h1>
+        <label for="k">Coulomb Constant:</label>
+        <input type="number" step="any" id="k" name="k" required>
+        <br>
+        <label for="q">Charge:</label>
+        <input type="number" step="any" id="q" name="q" required>
+        <br>
+        <label for="r">Distance of Separation:</label>
+        <input type="number" step="any" id="r" name="r" required>
+        <br>
+        <button type="button" onclick="electrical_constant()">Calculate</button>
+      </div>
+      
+      <div class="charles">
+        <h1>Charles' Law Calculator</h1>
+        <label for="solve1">Solve for Volume (1) or Temperature (2):</label>
+        <input type="number" id="solve1" name="solve1" min="1" max="2" required>
+        <br>
+        <label for="v1">Initial Volume:</label>
+        <input type="number" step="any" id="v1" name="v1" required>
+        <br>
+        <label for="t1">Initial Temperature (in Kelvin):</label>
+        <input type="number" step="any" id="t1" name="t1" required>
+        <br>
+        <label for="t2">Second Temperature (in Kelvin):</label>
+        <input type="number" step="any" id="t2" name="t2" required>
+        <br>
+        <label for="v2">Second Volume:</label>
+        <input type="number" step="any" id="v2" name="v2" required>
+        <br>
+        <button type="button" onclick="charles_law()">Calculate</button>
+      </div>
+      
+      <div class="boyles">
+        <h1>Boyle's Law Calculator</h1>
+        <label for="solve2">Solve for Volume (1) or Pressure (2):</label>
+        <input type="number" id="solve2" name="solve2" min="1" max="2" required>
+        <br>
+        <label for="v1">Initial Volume:</label>
+        <input type="number" step="any" id="v1" name="v1" required>
+        <br>
+        <label for="p1">Initial Pressure:</label>
+        <input type="number" step="any" id="p1" name="p1" required>
+        <br>
+        <label for="p2">Final Volume:</label>
+        <input type="number" step="any" id="p2" name="p2" required>
+        <br>
+        <label for="v2">Final Pressure:</label>
+        <input type="number" step="any" id="v2" name="v2" required>
+        <br>
+        <button type="button" onclick="boyles_law()">Calculate</button>
+      </div>
+      
+      <div class="avagadros-law">
+        <h1>Avogadro's Law Calculator</h1>
+        <label for="solve">Solve for:</label>
+        <select id="solve">
+          <option value="1">Volume</option>
+          <option value="2">Number of moles</option>
+        </select>
+        <br>
+        <label for="v1">Initial Volume:</label>
+        <input type="number" step="any" id="v1" name="v1" required>
+        <br>
+        <label for="n1">Initial Moles:</label>
+        <input type="number" step="any" id="n1" name="n1" required>
+        <br>
+        <label for="n2">Final Moles:</label>
+        <input type="number" step="any" id="n2" name="n2">
+        <br>
+        <label for="v2">Final Volume:</label>
+        <input type="number" step="any" id="v2" name="v2">
+        <br>
+        <button type="button" onclick="avagadrosLaw()">Calculate</button>
+        <p id="result"></p>
+      </div>
+      
+      <div>
+        <h2>Ideal Gas Law Calculator</h2>
+        <p>Select an option:</p>
+        <select id="option">
+          <option value="1">Pressure</option>
+          <option value="2">Volume</option>
+          <option value="3">Amount of substance</option>
+          <option value="4">Ideal gas constant</option>
+          <option value="5">Temperature</option>
+        </select>
+        <p>Enter the following:</p>
+        <div>
+          <input type="number" id="input1" placeholder="Value 1">
+          <input type="number" id="input2" placeholder="Value 2">
+          <input type="number" id="input3" placeholder="Value 3">
+          <input type="number" id="input4" placeholder="Value 4">
+        </div>
+        <br>
+        <button onclick="ideal_gas()">Calculate</button>
+        <p id="result"></p>
+      </div>
       
       
       <div class="reset-button">
