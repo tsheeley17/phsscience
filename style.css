@@ -29,6 +29,13 @@ body {
 
 /* Styling for main site */
 
+.para-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 60%;
+    color: #FFF;
+}
+
 /* ASCII art style */
 .art {
     background-color: #000;
