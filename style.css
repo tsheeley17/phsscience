@@ -61,6 +61,10 @@ body {
     width: 100%;
     color: #FFF;
     outline: #000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Styling for the formula container (div with all the formulas) */
@@ -134,4 +138,23 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+footer li {
+    list-style: none;
+    display: inline-block;
+}
+
+footer a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.footer-link {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
 }
